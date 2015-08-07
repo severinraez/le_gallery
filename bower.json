@@ -4,6 +4,7 @@
     "bourbon": "3.2.3",
     "susy": "~2.2.2",
     "breakpoint-sass": "~2.5.0",
-    "normalize-scss": "~3.0.3"
+    "normalize-scss": "~3.0.3",
+    "angular": "~1.4.3"
   }
 }

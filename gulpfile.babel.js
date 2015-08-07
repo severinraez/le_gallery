@@ -56,7 +56,7 @@ let isDevelopment = () => {
 const dirs = {
   src: "./app",
   dest: "./public",
-  bower: "./vendor/assets/bower_components"
+  bower: "./bower_components"
 };
 
 const cssFolder = "/styles";
@@ -148,17 +148,9 @@ gulp.task("scripts", () => {
 
 // Compile vendor scripts into one file
 gulp.task("scripts-vendors", () => {
+  console.log(`${dirs.bower}/angular/angular.js`);
   return gulp.src([
-    `${dirs.bower}/jquery/dist/jquery.js`,
-    `${dirs.bower}/slick.js/slick/slick.js`,
-    `${dirs.bower}/parsleyjs/dist/parsley.js`,
-    `${dirs.bower}/parsleyjs/src/i18n/de.js`,
-    `${dirs.bower}/parsleyjs/src/i18n/fr.js`,
-    `${dirs.bower}/parsleyjs/src/i18n/it.js`,
-    `${dirs.bower}/parsleyjs/src/i18n/en.js`,
-    `${dirs.bower}/fastclick/lib/fastclick.js`,
-    `${dirs.bower}/headroom.js/dist/headroom.min.js`,
-    `${dirs.bower}/headroom.js/dist/jQuery.headroom.min.js`
+    `${dirs.bower}/angular/angular.js`,
   ])
     .pipe($.concat("vendor.js"))
     .pipe($.if(isProduction(), $.rename({suffix: ".min"})))
