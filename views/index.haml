@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title Gallery
+    %link{rel => 'stylesheet', href => 'public/styles/style.min.css'}
+  %body
+    #container
+      %ul.navigation
+        %li Etusivu
+        %li Tuotteet
+
+      %h2= $foo
+      %ul.products
+        - for ($i = 0; $i < 10; $i++)
+          %li= $i * 7
+    %script{src => 'public/scripts/app.min.js'}
