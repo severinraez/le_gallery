@@ -4,14 +4,9 @@
     %title Gallery
     %link{rel => 'stylesheet', href => 'public/styles/style.min.css'}
   %body
-    #container
-      %ul.navigation
-        %li Etusivu
-        %li Tuotteet
+    %ul.le-gallery
+      - for ($i = 0; $i < 9; $i++)
+        %li.le-gallery__image Etusivu
 
-      %h2= $foo
-      %ul.products
-        - for ($i = 0; $i < 10; $i++)
-          %li= $i * 7
     %script{src => 'public/scripts/vendor.min.js'}
     %script{src => 'public/scripts/app.min.js'}
